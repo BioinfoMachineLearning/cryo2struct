@@ -15,3 +15,5 @@ The pre-generated dataset can be downloaded here: https://calla.rnet.missouri.ed
 
 
 ### Hidden Markov Model (HMM) to link predicted Ca atoms into backbone structures
+
+## References
