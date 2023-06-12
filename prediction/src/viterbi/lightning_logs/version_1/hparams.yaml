@@ -1,0 +1,19 @@
+base_filters: 16
+dim_linear_block: 3072
+dropout: 0.0
+embed_dim: 768
+ext_layers:
+- 3
+- 6
+- 9
+- 12
+img_shape: !!python/tuple
+- 32
+- 32
+- 32
+input_dim: 1
+learning_rate: 0.0001
+norm: instance
+num_heads: 12
+output_dim: 4
+patch_size: 16
