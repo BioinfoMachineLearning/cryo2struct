@@ -5,12 +5,7 @@ If you have any question, feel free to open an issue or reach out to us: [ngzvh@
 
 ![Data_Preparation_Workflow.png](./img/data_preparation_workflow.png)
 
-The data preparation pipeline for Cryo2Struct dataset follows the workflow above and can be split into three major components:
-
-1. **Data preprocessing**: Preprocessing the raw cryo-EM density maps by resampling and normalizing.
-3. **Data labeling**: The labeled mask density maps in which the voxels containing the key backbone atoms
-(carbon-alpha (Cα), nitrogen (N) and another carbon (C)) of residues (amino acids), the Cα atoms only, the twenty different types of amino acids that Cα atoms belong to, and the three different types of secondary structures (helix, strand, coil) of the Cα atoms are labeled.
-4. **Grid Division and Postprocess**: The grid division and reconstruction of full cryo-EM map from the subgrids.
+The data preparation pipeline for Cryo2Struct dataset follows the workflow above.
 
 ## Dataset Download
 The pre-generated dataset ready for training and testing machine learning and AI methods can be downloaded here: https://calla.rnet.missouri.edu/cryo2struct/. The total size of Cryo2Struct dataset is 6.5 TB.
