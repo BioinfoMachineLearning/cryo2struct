@@ -1,11 +1,10 @@
 # Cryo2Struct : A Large Labeled Cryo-EM Density Map Dataset for AI-based Reconstruction of Protein Structures 
 
-Cryo2Struct is a dataset for AI and machine learning reconstruction of protein structures from cryo-EM density maps. The programs for generating this dataset are included in this repository for users to reproduce the process of generating data or create customized datasets. The repository also contains all the necessary code, instructions, and model checkpoints to reproduce the structure reconstruction method. 
-
+Cryo2Struct is a dataset for AI and machine learning reconstruction of protein structures from cryo-EM density maps. The programs for generating this dataset are included in this repository for users to reproduce the process of generating data or create customized datasets. The repository also contains all the necessary code, instructions, and model checkpoints to reproduce the structure reconstruction method. The data preparation and validation pipeline for the Cryo2Struct dataset is described in the figure below.
 
 ![Data_Preparation_Workflow.png](./img/data_preparation_workflow.png)
 
-The data preparation pipeline for Cryo2Struct dataset follows the workflow above.
+
 
 ## Dataset Download
 The pre-generated dataset ready for training and testing machine learning and AI methods can be downloaded here: https://calla.rnet.missouri.edu/cryo2struct/. The total size of Cryo2Struct dataset is 6.5 TB.
