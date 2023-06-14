@@ -7,7 +7,7 @@ Cryo2Struct is a dataset for AI and machine learning reconstruction of protein s
 
 
 ## Dataset Download
-The pre-generated dataset ready for training and testing machine learning and AI methods can be downloaded here: https://calla.rnet.missouri.edu/cryo2struct/. The total size of Cryo2Struct dataset is 6.5 TB.
+The pre-generated dataset ready for training and testing machine learning and AI methods can be downloaded here: https://calla.rnet.missouri.edu/cryo2struct/. The total size of Cryo2Struct dataset is 8.5 TB.
 
 
 ## Description of the dataset
