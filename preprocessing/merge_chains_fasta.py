@@ -7,8 +7,35 @@ import os
 import sys
 
 
-def save_combined_fasta(map_name, combined_seq, input_path):
-    filename = f'{input_path}/{map_name}/combined_fasta.fasta'
+def chain_merger_2(map_name, input_path):
+    chain_fastas = [fa for fa in os.listdir(os.path.join(input_path, map_name)) if fa.endswith(".fasta")]
+    chain_fastas.sort()
+    f_name = chain_fastas[0].split("_")
+    f_name = chain_fastas[0].split(".")[0]
+    input_file = os.path.join(input_path,map_name,f'{f_name}.fasta')
+
+
+    output_file = f'{input_path}/{map_name}/{f_name}_all_chain_combined.fasta'
+    if os.path.exists(output_file):
+        os.remove(output_file)
+    
+    with open(input_file, "r") as input_fp, open(output_file, "w") as output_fp:
+        merge_lines = []
+        for line in input_fp:
+            if line.startswith(">"):
+                if merge_lines:
+                    merged_line = "".join(merge_lines)
+                    output_fp.write(merged_line)
+                    merge_lines = []
+            else:
+                merge_lines.append(line.strip())
+        if merge_lines:
+            merged_line = "".join(merge_lines)
+            output_fp.write(merged_line)
+    print(f_name, "Done")
+
+def save_combined_fasta(map_name, combined_seq, input_path,f_name):
+    filename = f'{input_path}/{map_name}/{f_name}_all_chain_combined.fasta'
     file_open = open(filename, "w")
     file_open.write(combined_seq)
     file_open.close()
@@ -25,6 +52,7 @@ def chain_merger(map_name, input_path):
     chain_seq = dict()
     chain_fastas = [fa for fa in os.listdir(os.path.join(input_path, map_name)) if fa.endswith(".fasta")]
     chain_fastas.sort()
+    f_name = chain_fastas[0].split(".")[0]
     for fa in chain_fastas:
         print(fa)
         with open(os.path.join(input_path, map_name, fa)) as f:
@@ -47,7 +75,7 @@ def chain_merger(map_name, input_path):
     for value in chain_seq.values():
         combined_seq += value
         length += len(value)
-    save_combined_fasta(map_name, combined_seq, input_path)
+    save_combined_fasta(map_name, combined_seq, input_path, f_name)
     print("Validate the length of sequences: ", length == len(combined_seq))
 
 
@@ -56,5 +84,5 @@ if __name__ == "__main__":
     density_maps = [d_map for d_map in os.listdir(input_path) if
                     os.path.isdir(os.path.join(input_path, d_map))]
     for em_maps in density_maps:
-        chain_merger(em_maps, input_path)
+        chain_merger_2(em_maps, input_path)
     print("Chain merger completed!")

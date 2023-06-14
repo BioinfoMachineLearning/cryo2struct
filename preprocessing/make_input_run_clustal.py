@@ -21,10 +21,13 @@ string_to_check_found_density_maps = set()
 
 def make_clustal_input(em_maps, input_path, string_to_check):
     print("Making clustal inputs!!!")
+    chain_fastas = [fa for fa in os.listdir(os.path.join(input_path, em_maps)) if fa.endswith(".fasta")]
+    chain_fastas.sort()
+    f_name = chain_fastas[0].split(".")[0]
     header_original = ">original"
     header_atom = ">atom"
-    original_fasta = "combined_fasta.fasta"
-    atom_fasta = "atom_fasta.fasta"
+    original_fasta = f"{f_name}_all_chain_combined.fasta"
+    atom_fasta = "atomic.fasta"
     filename = f'{input_path}/{em_maps}/dealign_clustal_input.fasta'
     file_open = open(filename, "a")
     file_open.write(header_original)
