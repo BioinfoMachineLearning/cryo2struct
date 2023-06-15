@@ -64,7 +64,7 @@ cryo2struct
 ```
 In the main directory of cryo2struct dataset, an Excel sheet named as `` metadata.csv `` contains the relevant information for each cryo-EM density map present in cryo2struct dataset. Specifically, each row of the sheet contains the EMD ID of the density map, it's corresponding PDB code, density map's resolution, structure determination method, the software used to determine the density map, the title and the journal of the article describing the density maps. 
 
-Inside the subdirectory of ``root``, there are 7,600 directories for each cryo-EM density map. As shown in above example data format, the following data files for each cryoEM density map are provided in its individual directory:
+Inside the subdirectory of ``root``, there are 7,600 directories each for one cryo-EM density map. As shown in above example data format, the following data files for each cryoEM density map are provided in its individual directory:
 - ``emd_0004.map`` : Original cryo-EM density map with EMD ID as its suffix, in this case; 0004.
 - ``emd_resampled_map.mrc`` : Resampled cryo-EM density map.
 - ``emd_normalized_map.mrc`` : Normalized cryo-EM denisty map.
