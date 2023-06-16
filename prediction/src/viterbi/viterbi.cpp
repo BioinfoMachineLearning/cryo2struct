@@ -1,3 +1,7 @@
+// @author: nabin
+// conda install -c conda-forge gxx  -> if older version of g++ is present
+// g++ -fPIC -shared -o viterbi.so viterbi.cpp -O3
+
 #include <iostream>
 #include <vector>
 #include <unordered_map>
@@ -5,10 +9,6 @@
 #include <limits>
 #include <tuple> 
 #include <set>
-
-
-// g++ -fPIC -shared -o viterbi.so viterbi.cpp -O3
-// // conda install -c conda-forge gxx  -> if older version of g++ is present
 
 bool success = false;
 
