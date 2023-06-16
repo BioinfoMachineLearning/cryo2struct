@@ -1,4 +1,9 @@
 
+"""
+@author: nabin
+
+- Runs ChimeraX in no-GUI mode to resample map.
+"""
 import sys
 import subprocess
 import os
