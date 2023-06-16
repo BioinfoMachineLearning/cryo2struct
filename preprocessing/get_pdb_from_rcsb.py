@@ -1,5 +1,7 @@
 
 """
+@author: nabin
+
 Gets PDB file of the proteins from RCSB Website.
 """
 
