@@ -1,4 +1,5 @@
 """
+@author: nabin
 
 This script creates MRC file and labels coils to 1
 """
