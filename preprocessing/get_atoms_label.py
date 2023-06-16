@@ -1,4 +1,5 @@
 """
+@author: nabin
 
 This script labels CA to 1, N to 2 and C to 3
 
