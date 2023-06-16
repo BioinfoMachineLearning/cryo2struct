@@ -1,4 +1,5 @@
 """
+@author: nabin
 
 This script uses normalized emd map and corresponding pdb file to extract amino acid from pdb file and create a new
 mrc file with amino acids.
