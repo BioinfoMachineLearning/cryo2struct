@@ -1,6 +1,9 @@
 """
+@author: nabin
 
-This script merges the chains of original fasta to a single sequence and saves it.
+- This script merges the chains of original fasta to a single sequence and saves it.
+- Use chain_merger if you have chain sequence on multiple fasta files (<pdb_code>_1.fasta, <pdb_code>_2.fasta, <pdb_code>_3.fasta and so on).
+- Use chain_merger_2 if you have chain sequences on a single fasta file (<pdb_code>.fasta).
 
 """
 import os
