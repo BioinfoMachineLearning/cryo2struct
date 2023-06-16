@@ -1,4 +1,5 @@
 """
+@author: nabin
 
 This script runs pdb2seq.pl to get sequence from pdb file
 
