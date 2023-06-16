@@ -1,4 +1,6 @@
 """
+@author: nabin
+
 Gets FASTA file of the proteins from RCSB Website.
 """
 
