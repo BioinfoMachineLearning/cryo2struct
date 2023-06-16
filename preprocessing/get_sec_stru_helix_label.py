@@ -1,4 +1,5 @@
 """
+@author: nabin
 
 This script opens in read/write mode of sec_struc_emd_normalized_map.mrc MRC file and labels helix to 2
 """
