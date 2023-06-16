@@ -1,4 +1,8 @@
+"""
+@author: nabin
 
+- Normalizes map with 95 percentile, to change the percentile value modify line number 27.
+"""
 import sys
 import mrcfile
 from copy import deepcopy
