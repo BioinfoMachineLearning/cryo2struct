@@ -1,14 +1,13 @@
 """
+@author: nabin
 
-
-1 - This script reads combined fasta and atom fasta then, writes into clustal.fasta
-2 - Runs clustal omega
-
+1 - This script reads combined fasta and atom fasta then, writes into dealign_clustal_input.fasta
+2 - Runs clustal omega on dealign_clustal_input.fasta. Output -> dealign_clustal_output.fasta
 
 >original
-# original fasta seq here, combined_fasta.fasta
+# original fasta seq here, <map_name>_all_chain_combined.fasta
 >atom
-# atom fasta seq here, atom_fasta.fasta
+# atom fasta seq here, atomic.fasta
 
 """
 import os
