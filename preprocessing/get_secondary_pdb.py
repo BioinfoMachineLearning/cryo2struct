@@ -1,4 +1,5 @@
 """
+@author: nabin
 
 This script extracts helix, strand and coil from the pdb file and saves them separately
 
