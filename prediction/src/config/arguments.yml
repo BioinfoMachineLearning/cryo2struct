@@ -1,8 +1,8 @@
 density_map_name: '22898'
 test_data_splits_dir: '../density_map_splits' # provide the density map's grid division directory here
 test_data_dir: '../example' # provide the density map's directory here
-amino_checkpoint: '../prediction/checkpoints/amino-epoch=972-valid_loss=0.032127.ckpt' # amino checkpoint here
-atom_checkpoint: '../prediction/checkpoints/atom-epoch=87-valid_loss=0.029128.ckpt' # atom checkpoint here
+amino_checkpoint: '../prediction/checkpoints/amino_acid_type_prediction.ckpt' # amino checkpoint here
+atom_checkpoint: '../prediction/checkpoints/backbone_atom_prediction.ckpt' # atom checkpoint here
 infer_run_on: 'cpu' # options: cpu or gpu
 infer_on_gpu: 0
 threshold: 0.4 # threshold for picking carbon alpha atoms
