@@ -217,5 +217,23 @@ phenix.chain_comparison target.pdb query.pdb
 ## Contact Information
 If you have any question, feel free to open an issue or reach out to us: [ngzvh@missouri.edu](ngzvh@missouri.edu), [chengji@missouri.edu](chengji@missouri.edu).
 
+## Citing this work
+If you use the code or data in this package, please cite:
+
+```bibtex
+@article {Cryo2Struct,
+	author = {Nabin Giri and Jianlin Cheng},
+	title = {Cryo2Struct: A Large Labeled Cryo-EM Density Map Dataset for AI-based Reconstruction of Protein Structures},
+	elocation-id = {2023.06.14.545024},
+	year = {2023},
+	doi = {10.1101/2023.06.14.545024},
+	publisher = {Cold Spring Harbor Laboratory},
+	URL = {https://www.biorxiv.org/content/early/2023/06/15/2023.06.14.545024},
+	eprint = {https://www.biorxiv.org/content/early/2023/06/15/2023.06.14.545024.full.pdf},
+	journal = {bioRxiv}
+}
+
+```
+
 ## Acknowledgements
 We thank computing resources, especially Andes and Summit supercomputer of the [Oak Ridge Leadership Computing Facility](https://www.olcf.ornl.gov/) for supporting the data preparation and training of the deep transformer model. 
