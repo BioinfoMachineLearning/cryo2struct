@@ -8,6 +8,7 @@
 """
 import os
 import sys
+import re
 
 
 def chain_merger_2(map_name, input_path):
@@ -21,21 +22,33 @@ def chain_merger_2(map_name, input_path):
     output_file = f'{input_path}/{map_name}/{f_name}_all_chain_combined.fasta'
     if os.path.exists(output_file):
         os.remove(output_file)
-    
+
     with open(input_file, "r") as input_fp, open(output_file, "w") as output_fp:
         merge_lines = []
+        repeat_count = 1
+
         for line in input_fp:
             if line.startswith(">"):
                 if merge_lines:
-                    merged_line = "".join(merge_lines)
+                    merged_line = "".join(merge_lines) * repeat_count
                     output_fp.write(merged_line)
                     merge_lines = []
+                    repeat_count = 1
+
+                chain_info = line.split("|")
+                if len(chain_info) > 1:
+                    chain_data = chain_info[1]
+                    repeat_count = len(chain_data.split(","))
             else:
                 merge_lines.append(line.strip())
+
         if merge_lines:
-            merged_line = "".join(merge_lines)
+            merged_line = "".join(merge_lines) * repeat_count
             output_fp.write(merged_line)
-    print(f_name, "Done")
+
+
+    print(output_file, "Done")
+        
 
 def save_combined_fasta(map_name, combined_seq, input_path,f_name):
     filename = f'{input_path}/{map_name}/{f_name}_all_chain_combined.fasta'
