@@ -7,7 +7,7 @@ Cryo2Struct is a dataset for AI and machine learning reconstruction of protein s
 
 
 ## Dataset Download
-The pre-generated dataset ready for training and testing machine learning and AI methods can be downloaded here: https://calla.rnet.missouri.edu/cryo2struct/. The total size of Cryo2Struct dataset is 8.5 TB.
+The pre-generated dataset ready for training and testing machine learning and AI methods can be downloaded here: https://calla.rnet.missouri.edu/cryo2struct/. The total size of Cryo2Struct dataset is 9 TB.
 
 
 ## Description of the dataset
@@ -16,55 +16,92 @@ The dataset can be accessed using the above dataset download link. The protein s
 cryo2struct
 ├── metadata.csv
 |── root
-    │── 0004
-        │-- emd_0004.map
-        │-- emd_resampled_map.mrc
-        |-- emd_normalized_map.mrc
-        |-- atom_emd_normalized_map.mrc
-        |-- ca_atom_emd_normalized_map.mrc
-        |-- amino_emd_normalized_map.mrc
-        |-- sec_struc_emd_normalized_map.mrc
-        |-- 6giq.pdb
-        |-- 6giq_helix.pdb
-        |-- 6giq_coil.pdb
-        |-- 6giq_strand.pdb
-        |-- 6giq.fasta
-        |-- 6giq_all_chain_combined.fasta
-        |-- atomic.fasta
-        |-- dealign_clustal_input.fasta
-        |-- dealign_clustal_output.fasta
+    │── EMD_0
+        │── 0004
+            │-- emd_0004.map
+            │-- emd_resampled_map.mrc
+            |-- emd_normalized_map.mrc
+            |-- atom_emd_normalized_map.mrc
+            |-- ca_atom_emd_normalized_map.mrc
+            |-- amino_emd_normalized_map.mrc
+            |-- sec_struc_emd_normalized_map.mrc
+            |-- 6giq.pdb
+            |-- 6giq_helix.pdb
+            |-- 6giq_coil.pdb
+            |-- 6giq_strand.pdb
+            |-- 6giq.fasta
+            |-- 6giq_all_chain_combined.fasta
+            |-- atomic.fasta
+            |-- dealign_clustal_input.fasta
+            |-- dealign_clustal_output.fasta
+        │── 0031
+            │-- emd_0031.map
+            │-- emd_resampled_map.mrc
+            |-- emd_normalized_map.mrc
+            |-- atom_emd_normalized_map.mrc
+            |-- ca_atom_emd_normalized_map.mrc
+            |-- amino_emd_normalized_map.mrc
+            |-- sec_struc_emd_normalized_map.mrc
+            |-- 6gmh.pdb
+            |-- 6gmh_helix.pdb
+            |-- 6gmh_coil.pdb
+            |-- 6gmh_strand.pdb
+            |-- 6gmh.fasta
+            |-- 6gmh_all_chain_combined.fasta
+            |-- atomic.fasta
+            |-- dealign_clustal_input.fasta
+            |-- dealign_clustal_output.fasta
 
-    │── 11150
-        │-- emd_11150.map
-        │-- emd_resampled_map.mrc
-        |-- emd_normalized_map.mrc
-        |-- atom_emd_normalized_map.mrc
-        |-- ca_atom_emd_normalized_map.mrc
-        |-- amino_emd_normalized_map.mrc
-        |-- sec_struc_emd_normalized_map.mrc
-        |-- 6zbc.pdb
-        |-- 6zbc_helix.pdb
-        |-- 6zbc_coil.pdb
-        |-- 6zbc_strand.pdb
-        |-- 6zbc.fasta
-        |-- 6zbc_all_chain_combined.fasta
-        |-- atomic.fasta
-        |-- dealign_clustal_input.fasta
-        |-- dealign_clustal_output.fasta
+    │── EMD_1
+        │── 11150
+            │-- emd_11150.map
+            │-- emd_resampled_map.mrc
+            |-- emd_normalized_map.mrc
+            |-- atom_emd_normalized_map.mrc
+            |-- ca_atom_emd_normalized_map.mrc
+            |-- amino_emd_normalized_map.mrc
+            |-- sec_struc_emd_normalized_map.mrc
+            |-- 6zbc.pdb
+            |-- 6zbc_helix.pdb
+            |-- 6zbc_coil.pdb
+            |-- 6zbc_strand.pdb
+            |-- 6zbc.fasta
+            |-- 6zbc_all_chain_combined.fasta
+            |-- atomic.fasta
+            |-- dealign_clustal_input.fasta
+            |-- dealign_clustal_output.fasta
+        │── 10040
+            │-- emd_10040.map
+            │-- emd_resampled_map.mrc
+            |-- ...
+            |-- ...
 
-    │── 30080
-        │-- emd_30080.map
-        │-- emd_resampled_map.mrc
-        |-- ...
-        |-- ...
+    │── EMD_2
+        │── 20060
+            │-- emd_20060.map
+            │-- emd_resampled_map.mrc
+            |-- ...
+            |-- ...
+        │── ...
+    
+    │── EMD_3
+        │── 3099
+            │-- emd_3099.map
+            │-- emd_resampled_map.mrc
+            |-- ...
+            |-- ...
 
     │── ...
 
-    │── ...
+    .
+    .
+    .
+
 ```
 In the main directory of cryo2struct dataset, an Excel sheet named as `` metadata.csv `` contains the relevant information for each cryo-EM density map present in cryo2struct dataset. Specifically, each row of the sheet contains the EMD ID of the density map, it's corresponding PDB code, density map's resolution, structure determination method, the software used to determine the density map, the title and the journal of the article describing the density maps. 
 
-Inside the subdirectory of ``root``, there are 7,600 directories each for one cryo-EM density map. As shown in above example data format, the following data files for each cryoEM density map are provided in its individual directory:
+Inside the subdirectory of the ```root``` directory, there are 11 subdirectories, each corresponding to cryo-EM density map names starting with a number, except for the ```test``` directory. The ```test``` directory contains the test datasets. As shown in the example data format above, each individual directory for a cryoEM density map provides the following data files:
+
 - ``emd_0004.map`` : Original cryo-EM density map with EMD ID as its suffix, in this case; 0004.
 - ``emd_resampled_map.mrc`` : Resampled cryo-EM density map.
 - ``emd_normalized_map.mrc`` : Normalized cryo-EM denisty map.
