@@ -13,7 +13,6 @@ import requests
 
 
 def get_pdb(em_path):
-    counter = 0
     dir_names = [m for m in os.listdir(em_path)]
     print("Length of maps", len(dir_names))
     for e in dir_names:
@@ -44,9 +43,6 @@ def get_pdb(em_path):
             print("No corresponding PDB structures found for the given EMDB ID.")
     else:
         print("Error retrieving data from the EMDB API.")
-
-
-    print("DONE : ", counter)
 
 
 
