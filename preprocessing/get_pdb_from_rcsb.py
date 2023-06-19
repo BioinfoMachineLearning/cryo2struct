@@ -9,27 +9,42 @@ import urllib.request
 import urllib.error
 import os
 import sys
+import requests
+
 
 def get_pdb(em_path):
     counter = 0
-    dir_names = ['23552', '7635', '22883', '25263', '27068', '31760']
+    dir_names = [m for m in os.listdir(em_path)]
     print("Length of maps", len(dir_names))
     for e in dir_names:
-        density = os.path.join(em_path,e)
-        pdb_files = [p for p in os.listdir(density) if p.endswith(".pdb")]
-        pdb_files.sort()
-        pdb_files = pdb_files[0].split("_")
-        pdb_files = pdb_files[0].split(".")[0]
-        try:
-            # Download the PDB file for the corresponding structure (PDB ID 6R4P)
-            pdb_url = f'https://files.rcsb.org/download/{pdb_files}.fasta'
-            urllib.request.urlretrieve(pdb_url, f'{density}/{pdb_files.lower()}.pdb')
+        # Retrieve the PDB structures associated with the EMDB entry
+        api_url = f"https://www.ebi.ac.uk/emdb/api/entry/{e}"
+        response = requests.get(api_url)
 
-            print(f'Successfully downloaded PDB file for EMD-ID {e} ===> {pdb_files.lower()}')
-            counter += 1
+        if response.status_code == 200:
+            data = response.json()
+            if "crossreferences" in data and "pdb_list" in data["crossreferences"]:
+                pdb_entries = data["crossreferences"]["pdb_list"]
             
-        except urllib.error.HTTPError as e:
-            print(f'Error downloading PDB file for EMD-ID {e} ===> {pdb_files}')
+                pdb_id = pdb_entries['pdb_reference']
+                pdb_id = pdb_id[0]['pdb_id']
+
+                # Download the PDB file
+                pdb_url = f"https://files.rcsb.org/download/{pdb_id}.pdb"
+                pdb_response = requests.get(pdb_url)
+
+                if pdb_response.status_code == 200:
+                    pdb_filename = f"{os.path.join(em_path,e)}/{pdb_id}.pdb"
+                    with open(pdb_filename, "wb") as file:
+                        file.write(pdb_response.content)
+                    print(f"Successfully downloaded PDB file: {pdb_filename}")
+                else:
+                    print(f"Error downloading the PDB file for PDB ID: {pdb_id}")
+        else:
+            print("No corresponding PDB structures found for the given EMDB ID.")
+    else:
+        print("Error retrieving data from the EMDB API.")
+
 
     print("DONE : ", counter)
 
