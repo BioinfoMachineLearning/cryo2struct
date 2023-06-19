@@ -1,13 +1,24 @@
 # Cryo2Struct : A Large Labeled Cryo-EM Density Map Dataset for AI-based Reconstruction of Protein Structures 
 
+<div align="center">
+	
+[![Paper](http://img.shields.io/badge/paper-bioRxiv-3F87CC.svg)](https://www.biorxiv.org/content/10.1101/2023.06.14.545024v1.full.pdf)  [![CC BY 4.0][cc-by-shield]][cc-by]
+
+[cc-by]: http://creativecommons.org/licenses/by/4.0/
+[cc-by-image]: https://i.creativecommons.org/l/by/4.0/88x31.png
+[cc-by-shield]: https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg
+
+</div>
+
 Cryo2Struct is a dataset for AI and machine learning reconstruction of protein structures from cryo-EM density maps. The programs for generating this dataset are included in this repository for users to reproduce the process of generating data or create customized datasets. The repository also contains all the necessary code, instructions, and model checkpoints to reproduce the structure reconstruction method. The data preparation and validation pipeline for the Cryo2Struct dataset is described in the figure below.
 
 ![Data_Preparation_Workflow.png](./img/data_preparation_workflow.png)
 
 
 
+
 ## Dataset Download
-The pre-generated dataset ready for training and testing machine learning and AI methods can be downloaded here: https://calla.rnet.missouri.edu/cryo2struct/. The total size of Cryo2Struct dataset is 9 TB.
+The pre-generated dataset ready for training and testing machine learning and AI methods can be downloaded here: https://calla.rnet.missouri.edu/cryo2struct/. The total size of Cryo2Struct dataset is ~ 9 TB.
 
 
 ## Description of the dataset
@@ -274,3 +285,8 @@ If you use the code or data in this package, please cite:
 
 ## Acknowledgements
 We thank computing resources, especially Andes and Summit supercomputer of the [Oak Ridge Leadership Computing Facility](https://www.olcf.ornl.gov/) for supporting the data preparation and training of the deep transformer model. 
+
+## Visualization of a predicted structure using cryo2struct dataset and HMM-Guided alignment of carbon-alpha atoms
+The superimposition of the predicted backbone structure (blue) with the known backbone structure (gold)	of SARS-CoV-2 Delta(B.1.617.2) spike protein (EMD-25855).
+
+![25855.gof](./img/25855.gif)
