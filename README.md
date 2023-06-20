@@ -289,4 +289,4 @@ We thank computing resources, especially Andes and Summit supercomputer of the [
 ## Visualization of a predicted structure using cryo2struct dataset and HMM-Guided alignment of carbon-alpha atoms
 The superimposition of the predicted backbone structure (blue) with the known backbone structure (gold)	of SARS-CoV-2 Delta(B.1.617.2) spike protein (EMD-25855).
 
-![25855.gof](./img/25855.gif)
+![25855.gif](./img/25855.gif)
