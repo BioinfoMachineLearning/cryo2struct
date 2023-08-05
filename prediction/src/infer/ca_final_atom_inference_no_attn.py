@@ -324,7 +324,7 @@ def get_manifest_dimentions(image_shape):
 
 
 def get_xyz(idx, voxel, origin):
-    return (idx * voxel) - origin
+    return (idx * voxel) + origin
 
 
 def save_probs(mrc_file, idx_file, file_prob):
