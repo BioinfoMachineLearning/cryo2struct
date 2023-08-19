@@ -26,83 +26,85 @@ The dataset can be accessed using the above dataset download link. The protein s
 ```text
 cryo2struct
 ├── metadata.csv
+├── splits.csv
 |── root
-    │── EMD_0
-        │── 0004
-            │-- emd_0004.map
-            │-- emd_resampled_map.mrc
-            |-- emd_normalized_map.mrc
-            |-- atom_emd_normalized_map.mrc
-            |-- ca_atom_emd_normalized_map.mrc
-            |-- amino_emd_normalized_map.mrc
-            |-- sec_struc_emd_normalized_map.mrc
-            |-- 6giq.pdb
-            |-- 6giq_helix.pdb
-            |-- 6giq_coil.pdb
-            |-- 6giq_strand.pdb
-            |-- 6giq.fasta
-            |-- 6giq_all_chain_combined.fasta
-            |-- atomic.fasta
-            |-- dealign_clustal_input.fasta
-            |-- dealign_clustal_output.fasta
-        │── 0031
-            │-- emd_0031.map
-            │-- emd_resampled_map.mrc
-            |-- emd_normalized_map.mrc
-            |-- atom_emd_normalized_map.mrc
-            |-- ca_atom_emd_normalized_map.mrc
-            |-- amino_emd_normalized_map.mrc
-            |-- sec_struc_emd_normalized_map.mrc
-            |-- 6gmh.pdb
-            |-- 6gmh_helix.pdb
-            |-- 6gmh_coil.pdb
-            |-- 6gmh_strand.pdb
-            |-- 6gmh.fasta
-            |-- 6gmh_all_chain_combined.fasta
-            |-- atomic.fasta
-            |-- dealign_clustal_input.fasta
-            |-- dealign_clustal_output.fasta
+    ├── full_dataset
+        │── EMD_0
+           │── 0004
+             │-- emd_0004.map
+             │-- emd_resampled_map.mrc
+             |-- emd_normalized_map.mrc
+             |-- atom_emd_normalized_map.mrc
+             |-- ca_atom_emd_normalized_map.mrc
+             |-- amino_emd_normalized_map.mrc
+             |-- sec_struc_emd_normalized_map.mrc
+             |-- 6giq.pdb
+             |-- 6giq_helix.pdb
+             |-- 6giq_coil.pdb
+             |-- 6giq_strand.pdb
+             |-- 6giq.fasta
+             |-- 6giq_all_chain_combined.fasta
+             |-- atomic.fasta
+             |-- dealign_clustal_input.fasta
+             |-- dealign_clustal_output.fasta
+          │── 0031
+             │-- emd_0031.map
+             │-- emd_resampled_map.mrc
+             |-- emd_normalized_map.mrc
+             |-- atom_emd_normalized_map.mrc
+             |-- ca_atom_emd_normalized_map.mrc
+             |-- amino_emd_normalized_map.mrc
+             |-- sec_struc_emd_normalized_map.mrc
+             |-- 6gmh.pdb
+             |-- 6gmh_helix.pdb
+             |-- 6gmh_coil.pdb
+             |-- 6gmh_strand.pdb
+             |-- 6gmh.fasta
+             |-- 6gmh_all_chain_combined.fasta
+             |-- atomic.fasta
+             |-- dealign_clustal_input.fasta
+             |-- dealign_clustal_output.fasta
 
-    │── EMD_1
-        │── 11150
-            │-- emd_11150.map
-            │-- emd_resampled_map.mrc
-            |-- emd_normalized_map.mrc
-            |-- atom_emd_normalized_map.mrc
-            |-- ca_atom_emd_normalized_map.mrc
-            |-- amino_emd_normalized_map.mrc
-            |-- sec_struc_emd_normalized_map.mrc
-            |-- 6zbc.pdb
-            |-- 6zbc_helix.pdb
-            |-- 6zbc_coil.pdb
-            |-- 6zbc_strand.pdb
-            |-- 6zbc.fasta
-            |-- 6zbc_all_chain_combined.fasta
-            |-- atomic.fasta
-            |-- dealign_clustal_input.fasta
-            |-- dealign_clustal_output.fasta
-        │── 10040
-            │-- emd_10040.map
-            │-- emd_resampled_map.mrc
-            |-- ...
-            |-- ...
+        │── EMD_1
+           │── 11150
+             │-- emd_11150.map
+             │-- emd_resampled_map.mrc
+             |-- emd_normalized_map.mrc
+             |-- atom_emd_normalized_map.mrc
+             |-- ca_atom_emd_normalized_map.mrc
+             |-- amino_emd_normalized_map.mrc
+             |-- sec_struc_emd_normalized_map.mrc
+             |-- 6zbc.pdb
+             |-- 6zbc_helix.pdb
+             |-- 6zbc_coil.pdb
+             |-- 6zbc_strand.pdb
+             |-- 6zbc.fasta
+             |-- 6zbc_all_chain_combined.fasta
+             |-- atomic.fasta
+             |-- dealign_clustal_input.fasta
+             |-- dealign_clustal_output.fasta
+          │── 10040
+             │-- emd_10040.map
+             │-- emd_resampled_map.mrc
+             |-- ...
+             |-- ...
 
-    │── EMD_2
-        │── 20060
-            │-- emd_20060.map
-            │-- emd_resampled_map.mrc
-            |-- ...
-            |-- ...
-        │── ...
+       │── EMD_2
+          │── 20060
+             │-- emd_20060.map
+             │-- emd_resampled_map.mrc
+             |-- ...
+             |-- ...
+          │── ...
     
-    │── EMD_3
-        │── 3099
+       │── EMD_3
+          │── 3099
             │-- emd_3099.map
             │-- emd_resampled_map.mrc
             |-- ...
             |-- ...
 
-    │── ...
+       │── ...
 
     .
     .
