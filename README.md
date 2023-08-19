@@ -222,6 +222,28 @@ bash run_data_preparation.bash ../example
  In the above example ``../example`` is the ``absolute input path``. Due to the file size limitation, the cryo-EM density map of EMD 22898 is not available in [example/22898/](example/22898) directory. EMD 22898 map can be downloaded from [here](https://www.emdataresource.org/EMD-22898), keep the map in [example/22898/](example/22898) and then run the above bash command.
 
 ## Programs to validate the dataset
+We validated data processing pipeline as decribed in Section 5 of the paper by using the scripts:
+
+
+(a) Resampling:
+```
+python3 validation/resampling_validation.py
+```
+(b) Normalizaion:
+```
+python3 validation/normalization_validation.py
+```
+(c) Labeling:
+```
+python3 validation/labeling_validation.py
+```
+(d) Compliance with MRC2014 Format:
+```
+python3 validation/validate_mrc.py
+```
+
+
+## Programs to validate the dataset using deep learning
 To validate the utility and quality of Cryo2Struct, we designed two deep transformer models and trained and test them on Cryo2Struct to predict backbone atoms and amino acid types from density maps.
 
 ### Deep transformer to predict protein backbone atoms and amino acid types
