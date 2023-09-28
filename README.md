@@ -1,4 +1,4 @@
-# Cryo2Struct : A Large Labeled Cryo-EM Density Map Dataset for AI-based Reconstruction of Protein Structures 
+# Cryo2StructData : A Large Labeled Cryo-EM Density Map Dataset for AI-based Reconstruction of Protein Structures 
 
 <div align="center">
 	
@@ -10,7 +10,7 @@
 
 </div>
 
-Cryo2Struct is a dataset for AI and machine learning reconstruction of protein structures from cryo-EM density maps. The programs for generating this dataset are included in this repository for users to reproduce the process of generating data or create customized datasets. The repository also contains all the necessary code, instructions, and model checkpoints to reproduce the structure reconstruction method. The data preparation and validation pipeline for the Cryo2Struct dataset is described in the figure below.
+Cryo2StructData is a dataset for AI and machine learning reconstruction of protein structures from cryo-EM density maps. The programs for generating this dataset are included in this repository for users to reproduce the process of generating data or create customized datasets. The repository also contains all the necessary code, instructions, and model checkpoints to reproduce the structure reconstruction method. The data preparation and validation pipeline for the Cryo2StructData is described in the figure below.
 
 ![Data_Preparation_Workflow.png](./img/data_preparation_workflow.png)
 
@@ -22,7 +22,7 @@ The pre-generated dataset ready for training and testing machine learning and AI
 
 
 ## Description of the dataset
-The dataset can be accessed using the above dataset download link. The protein structures and cryo-EM density maps can be visualized using tools such as: [UCSF ChimeraX](https://www.cgl.ucsf.edu/chimerax/index.html) and [PyMOL](https://pymol.org). The dataset follows the format described below:
+The dataset can be accessed using the above dataset download link. The protein structures and cryo-EM density maps can be visualized using tools such as: [UCSF ChimeraX](https://www.cgl.ucsf.edu/chimerax/index.html). The dataset follows the format described below:
 ```text
 cryo2struct
 ├── metadata.csv
