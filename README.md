@@ -138,19 +138,10 @@ If you want to generate the dataset by yourself, please set up the environment u
 Here is an example to set up a working conda environment to run the code.
 
 ```
-conda create --name cryo2struct python==3.9.12
+conda env create -f cryo2struct.yml
 conda activate cryo2struct
 ```
-If you want to run only the dataset generation programs, then install the dependencies:
 
-```
-pip3 install -r preprocessing/requirements.txt
-```
-If you want to run both dataset preparation and validation programs then, install the dependencies:
-
-```
-pip3 install -r prediction/requirements.txt
-```
 Additionally, the pipeline requires [UCSF ChimeraX](https://www.cgl.ucsf.edu/chimerax/index.html) to resample the density map and extract secondary structures from the ``.pdb`` file in non-GUI mode. The pipeline also requires [Clustal Omega](http://www.clustal.org/omega/#Documentation) to be installed on the system for running the alignment between original sequence and atomic seqeunce. If user wants to skip the alignment process, then the installation of Clustal Omega is not required. We used ChimeraX 1.4-1 in CentOS 8 system.
 
 ## Programs to generate the dataset
