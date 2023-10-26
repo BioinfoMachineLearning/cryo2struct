@@ -18,8 +18,9 @@ Cryo2StructData is a dataset for AI and machine learning reconstruction of prote
 
 
 ## Dataset Download
-The pre-generated dataset ready for training and testing machine learning and AI methods can be downloaded here: https://calla.rnet.missouri.edu/cryo2struct/. The total size of Cryo2Struct dataset is ~ 9 TB.
+To keep the data files of Cryo2StructData permanent, we published all data to the Harvard Dataverse (https://dataverse.harvard.edu/dataverse/Cryo2StructData), an online data management and sharing platform with a permanent Digital Object Identifier number for each dataset. 
 
+The Cryo2StructData Dataverse comprises the Full Cryo2StructData (https://doi.org/10.7910/DVN/FCDG0W) along with its associated trained deep transformer model and data split (https://doi.org/10.7910/DVN/SXNYRE). Similarly, within the Cryo2StructData Dataverse, you will find the Small Subsample (https://doi.org/10.7910/DVN/CGUENL) of the complete Cryo2StructData companied by its respective trained deep transformer model and data splits (https://doi.org/10.7910/DVN/DTV4JF). Finally, the test dataset can be access here: https://doi.org/10.7910/DVN/2GSSC9 .
 
 ## Description of the dataset
 The dataset can be accessed using the above dataset download link. The protein structures and cryo-EM density maps can be visualized using tools such as: [UCSF ChimeraX](https://www.cgl.ucsf.edu/chimerax/index.html). The dataset follows the format described below:
@@ -32,7 +33,6 @@ cryo2struct
         │── EMD_0
            │── 0004
              │-- emd_0004.map
-             │-- emd_resampled_map.mrc
              |-- emd_normalized_map.mrc
              |-- atom_emd_normalized_map.mrc
              |-- ca_atom_emd_normalized_map.mrc
@@ -49,7 +49,6 @@ cryo2struct
              |-- dealign_clustal_output.fasta
           │── 0031
              │-- emd_0031.map
-             │-- emd_resampled_map.mrc
              |-- emd_normalized_map.mrc
              |-- atom_emd_normalized_map.mrc
              |-- ca_atom_emd_normalized_map.mrc
@@ -68,7 +67,6 @@ cryo2struct
         │── EMD_1
            │── 11150
              │-- emd_11150.map
-             │-- emd_resampled_map.mrc
              |-- emd_normalized_map.mrc
              |-- atom_emd_normalized_map.mrc
              |-- ca_atom_emd_normalized_map.mrc
@@ -111,17 +109,16 @@ cryo2struct
     .
 
 ```
-In the main directory of cryo2struct dataset, an Excel sheet named as `` metadata.csv `` contains the relevant information for each cryo-EM density map present in cryo2struct dataset. Specifically, each row of the sheet contains the EMD ID of the density map, it's corresponding PDB code, density map's resolution, structure determination method, the software used to determine the density map, the title and the journal of the article describing the density maps. 
+In the Cryo2StructData Dataverse, an Excel sheet named as `` metadata.csv `` contains the relevant information for each cryo-EM density map present in Cryo2StructData dataset. Specifically, each row of the sheet contains the EMD ID of the density map, it's corresponding PDB code, density map's resolution, structure determination method, the software used to determine the density map, the title and the journal of the article describing the density maps. 
 
-Inside the subdirectory of the ```root``` directory, there are 11 subdirectories, corresponding to 10 folds of the curated training density maps (EMD_0, ..., EMD_9) and a ```test``` sub-directory. The ```test``` sub-directory contains the test dataset. As shown in the example data format above, each individual sub-directory for a cryoEM density map in a fold or the test sub-directory provides the following data files:
+In the Full Cryo2StructData directory (https://doi.org/10.7910/DVN/FCDG0W), there are 10 subdirectories, corresponding to 10 folds of the curated training density maps (EMD_0, ..., EMD_9). As shown in the example data format above, each individual sub-directory for a cryoEM density map in a fold provides the following data files:
 
 - ``emd_0004.map`` : Original cryo-EM density map with EMD ID as its suffix, in this case; 0004.
-- ``emd_resampled_map.mrc`` : Resampled cryo-EM density map.
 - ``emd_normalized_map.mrc`` : Normalized cryo-EM denisty map.
 - ``atom_emd_normalized_map.mrc`` : Atoms lableled cryo-EM density map.
-- ``ca_atom_emd_normalized_map.mrc`` : Carbon-alpha (Cα) atoms only labeled cryo-EM density map.
-- ``amino_emd_normalized_map.mrc`` : Amino acids labeled cryo-EM density map.
-- ``sec_struc_emd_normalized_map.mrc`` : Secondary structure labeled cryo-EM density map.
+- ``ca_atom_emd_normalized_map.mrc`` : Carbon-alpha (Cα) atoms only labeled cryo-EM density map. Users need to use script provided in this repository to generate this labeled map.
+- ``amino_emd_normalized_map.mrc`` : Amino acids labeled cryo-EM density map. Users need to use script provided in this repository to generate this labeled map.
+- ``sec_struc_emd_normalized_map.mrc`` : Secondary structure labeled cryo-EM density map. Users need to use script provided in this repository to generate this labeled map.
 - ``6giq.pdb`` : PDB file of the cryo-EM density.
 - ``6giq_helix.pdb`` : Extracted helices from the PDB file.
 - ``6giq_coil.pdb`` : Extracted coils from the PDB file.
@@ -237,10 +234,10 @@ python3 validation/validate_mrc.py
 
 
 ## Programs to validate the dataset using deep learning
-To validate the utility and quality of Cryo2Struct, we designed two deep transformer models and trained and test them on Cryo2Struct to predict backbone atoms and amino acid types from density maps.
+To validate the utility and quality of Cryo2StructData, we designed two deep transformer models and trained and test them on Cryo2StructData to predict backbone atoms and amino acid types from density maps.
 
 ### Deep transformer to predict protein backbone atoms and amino acid types
-The inference program for the deep transformer is available in [prediction/src/infer/](prediction/src/infer/). Download the model checkpoints from https://calla.rnet.missouri.edu/cryo2struct/model_checkpoints and keep them in [prediction/checkpoints](prediction/checkpoints/) directory.
+The inference program for the deep transformer is available in [prediction/src/infer/](prediction/src/infer/). Download the model checkpoints from [Trained on Full Cryo2StructData](https://doi.org/10.7910/DVN/SXNYRE) or [Trained on Small Subset Cryo2StructData](https://doi.org/10.7910/DVN/CGUENL) and keep them in [prediction/checkpoints](prediction/checkpoints/) directory.
 
 ### Hidden Markov Model (HMM) to link predicted Ca atoms into backbone structures
 The Hidden Markov Model-Guided carbon-alpha atom connection program are available in [prediction/src/viterbi/](prediction/src/viterbi/). The viterbi algorithm is written in C++ program, so compile them using:
