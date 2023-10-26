@@ -83,14 +83,14 @@ cryo2struct
              |-- dealign_clustal_output.fasta
           │── 10040
              │-- emd_10040.map
-             │-- emd_resampled_map.mrc
+             │-- emd_normalized_map.mrc
              |-- ...
              |-- ...
 
        │── EMD_2
           │── 20060
              │-- emd_20060.map
-             │-- emd_resampled_map.mrc
+             │-- emd_normalized_map.mrc
              |-- ...
              |-- ...
           │── ...
@@ -98,7 +98,7 @@ cryo2struct
        │── EMD_3
           │── 3099
             │-- emd_3099.map
-            │-- emd_resampled_map.mrc
+            │-- emd_normalized_map.mrc
             |-- ...
             |-- ...
 
