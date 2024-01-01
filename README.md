@@ -1,4 +1,4 @@
-# Cryo2StructData : A Large Labeled Cryo-EM Density Map Dataset for AI-based Reconstruction of Protein Structures 
+# Cryo2StructData: A Large Labeled Cryo-EM Density Map Dataset for AI-based Modeling of Protein Structures 
 
 <div align="center">
 	
@@ -10,7 +10,7 @@
 
 </div>
 
-Cryo2StructData is a dataset for AI and machine learning reconstruction of protein structures from cryo-EM density maps. The programs for generating this dataset are included in this repository for users to reproduce the process of generating data or create customized datasets. The repository also contains all the necessary code, instructions, and model checkpoints to reproduce the structure reconstruction method. The data preparation and validation pipeline for the Cryo2StructData is described in the figure below.
+Cryo2StructData is a dataset for AI-based modeling of protein structures from cryo-EM density maps. The programs for generating this dataset are included in this repository for users to reproduce the process of generating data or create customized datasets. The repository also contains all the necessary code, instructions, and model checkpoints to reproduce the structure reconstruction method. The data preparation and validation pipeline for the Cryo2StructData is described in the figure below.
 
 ![Data_Preparation_Workflow.png](./img/data_preparation_workflow.png)
 
