@@ -10,7 +10,7 @@
 
 </div>
 
-Cryo2StructData is a dataset for AI-based modeling of protein structures from cryo-EM density maps. The programs for generating this dataset are included in this repository for users to reproduce the process of generating data or create customized datasets. The repository also contains all the necessary code, instructions, and model checkpoints to reproduce the structure reconstruction method. The data preparation and validation pipeline for the Cryo2StructData is described in the figure below.
+Cryo2StructData is a dataset for AI-based modeling of protein structures from cryo-EM density maps. The programs for generating this dataset are included in this repository for users to reproduce the process of generating data or create customized datasets. The repository also contains all the necessary code, instructions, and trained models to reproduce the aotmic structure building protocol. The data preparation and validation pipeline for the Cryo2StructData is described in the figure below.
 
 ![Data_Preparation_Workflow.png](./img/data_preparation_workflow.png)
 
@@ -281,15 +281,15 @@ If you have any question, feel free to open an issue or reach out to us: [ngzvh@
 If you use the code or data in this package, please cite:
 
 ```bibtex
-@article {Cryo2Struct,
-	author = {Nabin Giri and Jianlin Cheng},
-	title = {Cryo2Struct: A Large Labeled Cryo-EM Density Map Dataset for AI-based Reconstruction of Protein Structures},
+@article {Giri2023.06.14.545024,
+	author = {Nabin Giri and Liguo Wang and Jianlin Cheng},
+	title = {Cryo2StructData: A Large Labeled Cryo-EM Density Map Dataset for AI-based Modeling of Protein Structures},
 	elocation-id = {2023.06.14.545024},
-	year = {2023},
+	year = {2024},
 	doi = {10.1101/2023.06.14.545024},
 	publisher = {Cold Spring Harbor Laboratory},
-	URL = {https://www.biorxiv.org/content/early/2023/06/15/2023.06.14.545024},
-	eprint = {https://www.biorxiv.org/content/early/2023/06/15/2023.06.14.545024.full.pdf},
+	URL = {https://www.biorxiv.org/content/early/2024/01/02/2023.06.14.545024},
+	eprint = {https://www.biorxiv.org/content/early/2024/01/02/2023.06.14.545024.full.pdf},
 	journal = {bioRxiv}
 }
 
