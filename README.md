@@ -23,7 +23,7 @@ To keep the data files of Cryo2StructData permanent, we published all data to th
 The Cryo2StructData Dataverse comprises the Full Cryo2StructData (https://doi.org/10.7910/DVN/FCDG0W) along with its associated trained deep transformer model and data split (https://doi.org/10.7910/DVN/SXNYRE). Similarly, within the Cryo2StructData Dataverse, you will find the Small Subsample (https://doi.org/10.7910/DVN/CGUENL) of the complete Cryo2StructData companied by its respective trained deep transformer model and data splits (https://doi.org/10.7910/DVN/DTV4JF). Finally, the test dataset can be access here: https://doi.org/10.7910/DVN/2GSSC9 .
 
 ## Description of the dataset
-The dataset can be accessed using the above dataset download link. The protein structures and cryo-EM density maps can be visualized using tools such as: [UCSF ChimeraX](https://www.cgl.ucsf.edu/chimerax/index.html). The dataset follows the format described below:
+The dataset can be accessed using the above dataset download link. The protein structures and cryo-EM density maps can be visualized using tools such as: [UCSF ChimeraX](https://www.cgl.ucsf.edu/chimerax/index.html). The dataset follows the format described below, and please read the subsequent section describing what these data mean.
 ```text
 cryo2struct
 ├── metadata.csv
@@ -172,10 +172,13 @@ The atoms and amino acid labeling program can be run as:
 python3 get_atoms_label.py <absolute input path>
 python3 get_amino_labels.py <absolute input path>
 ```
-The secondary structure labeling program first extracts coils, helices, and strands using [UCSF ChimeraX](https://www.cgl.ucsf.edu/chimerax/index.html) in no-GUI mode and saves them as seperate ``.pdb`` files. Then, the program labels density map with the saved ``.pdb`` files.
-
+ 
+Run the below if `{emd_id}_coil.pdb`, `{emd_id}_helix.pdb`, and `{emd_id}_strand.pdb` are not present in the files downloaded from Cryo2StructData dataverse. The below program extracts coils, helices, and strands using [UCSF ChimeraX](https://www.cgl.ucsf.edu/chimerax/index.html) in no-GUI mode and saves them as seperate ``.pdb`` files. 
 ```
 python3 get_secondary_pdb.py <absolute input path>
+```
+Run the below to generate the label mask maps for secondary structure. The programs below use the above generated `{emd_id}_coil.pdb`, `{emd_id}_helix.pdb`, and `{emd_id}_strand.pdb` files to generate a single labled MRC file.
+```
 python3 get_sec_stru_coil_label.py <absolute input path>
 python3 get_sec_stru_helix_label.py <absolute input path>
 python3 get_sec_stru_strand_label.py <absolute input path>
