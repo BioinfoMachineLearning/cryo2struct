@@ -173,11 +173,11 @@ python3 get_atoms_label.py <absolute input path>
 python3 get_amino_labels.py <absolute input path>
 ```
  
-Run the below if `{emd_id}_coil.pdb`, `{emd_id}_helix.pdb`, and `{emd_id}_strand.pdb` are not present in the files downloaded from Cryo2StructData dataverse. The below program extracts coils, helices, and strands using [UCSF ChimeraX](https://www.cgl.ucsf.edu/chimerax/index.html) in no-GUI mode and saves them as seperate ``.pdb`` files. 
+Run the below if `{emd_id}_coil.pdb`, `{emd_id}_helix.pdb`, and `{emd_id}_strand.pdb` are not present in the files downloaded from Cryo2StructData dataverse or you are reproducing the label generation process. The below program extracts coils, helices, and strands using [UCSF ChimeraX](https://www.cgl.ucsf.edu/chimerax/index.html) in no-GUI mode and saves them as seperate ``.pdb`` files. 
 ```
 python3 get_secondary_pdb.py <absolute input path>
 ```
-Run the below to generate the label mask maps for secondary structure. The programs below use the above generated `{emd_id}_coil.pdb`, `{emd_id}_helix.pdb`, and `{emd_id}_strand.pdb` files to generate a single labled MRC file.
+Run the below to generate the label mask maps for secondary structure. The programs below use the above generated `{emd_id}_coil.pdb`, `{emd_id}_helix.pdb`, and `{emd_id}_strand.pdb` files to generate a single labeled MRC file.
 ```
 python3 get_sec_stru_coil_label.py <absolute input path>
 python3 get_sec_stru_helix_label.py <absolute input path>
