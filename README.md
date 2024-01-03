@@ -234,7 +234,7 @@ python3 validation/validate_mrc.py
 
 
 ## Programs to validate the dataset using deep learning
-To validate the utility and quality of Cryo2StructData, we designed two deep transformer models and trained and tested them on Cryo2StructData to predict backbone atoms and amino acid types from density maps. We have released the source code for training and validation of these deep learning models, which is available here: https://github.com/jianlin-cheng/Cryo2Struct . The paper describing the method in detail is available here: https://doi.org/10.1101/2024.01.02.573943 .
+To validate the utility and quality of Cryo2StructData, we designed two deep transformer models and trained and tested them on Cryo2StructData to predict backbone atoms and amino acid types from density maps. We have released the source code for training and validation of these deep learning models, which is available here: https://github.com/jianlin-cheng/Cryo2Struct . The paper describing the method in detail is available here: [https://doi.org/10.1101/2024.01.02.573943](https://www.biorxiv.org/content/10.1101/2024.01.02.573943v1) . You can model the protein structures by following the steps below or refer to the steps provided here:  https://github.com/jianlin-cheng/Cryo2Struct (**Recommended**).
 
 ### Deep transformer to predict protein backbone atoms and amino acid types
 The inference program for the deep transformer is available in [prediction/src/infer/](prediction/src/infer/). Download the model checkpoints from [Trained on Full Cryo2StructData](https://doi.org/10.7910/DVN/SXNYRE) or [Trained on Small Subset Cryo2StructData](https://doi.org/10.7910/DVN/DTV4JF) and keep them in [prediction/checkpoints](prediction/checkpoints/) directory.
