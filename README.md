@@ -281,7 +281,7 @@ If you have any question, feel free to open an issue or reach out to us: [ngzvh@
 If you use the code or data in this package, please cite:
 
 ```bibtex
-@article {Giri2023.06.14.545024,
+@article {Cryo2StructData,
 	author = {Nabin Giri and Liguo Wang and Jianlin Cheng},
 	title = {Cryo2StructData: A Large Labeled Cryo-EM Density Map Dataset for AI-based Modeling of Protein Structures},
 	elocation-id = {2023.06.14.545024},
