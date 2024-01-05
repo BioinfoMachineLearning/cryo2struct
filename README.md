@@ -35,7 +35,7 @@ cryo2struct
              │-- emd_0004.map
              |-- emd_normalized_map.mrc
              |-- atom_emd_normalized_map.mrc
-             |-- ca_atom_emd_normalized_map.mrc
+             |-- atom_ca_emd_normalized_map.mrc
              |-- amino_emd_normalized_map.mrc
              |-- sec_struc_emd_normalized_map.mrc
              |-- 6giq.pdb
@@ -51,7 +51,7 @@ cryo2struct
              │-- emd_0031.map
              |-- emd_normalized_map.mrc
              |-- atom_emd_normalized_map.mrc
-             |-- ca_atom_emd_normalized_map.mrc
+             |-- atom_ca_emd_normalized_map.mrc
              |-- amino_emd_normalized_map.mrc
              |-- sec_struc_emd_normalized_map.mrc
              |-- 6gmh.pdb
@@ -69,7 +69,7 @@ cryo2struct
              │-- emd_11150.map
              |-- emd_normalized_map.mrc
              |-- atom_emd_normalized_map.mrc
-             |-- ca_atom_emd_normalized_map.mrc
+             |-- atom_ca_emd_normalized_map.mrc
              |-- amino_emd_normalized_map.mrc
              |-- sec_struc_emd_normalized_map.mrc
              |-- 6zbc.pdb
