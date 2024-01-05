@@ -116,7 +116,7 @@ In the Full Cryo2StructData directory (https://doi.org/10.7910/DVN/FCDG0W), ther
 - ``emd_0004.map`` : Original cryo-EM density map with EMD ID as its suffix, in this case; 0004.
 - ``emd_normalized_map.mrc`` : Normalized cryo-EM denisty map.
 - ``atom_emd_normalized_map.mrc`` : Atoms lableled cryo-EM density map.
-- ``ca_atom_emd_normalized_map.mrc`` : Carbon-alpha (Cα) atoms only labeled cryo-EM density map. Users need to use script provided in this repository to generate this labeled map.
+- ``atom_ca_emd_normalized_map.mrc`` : Carbon-alpha (Cα) atoms only labeled cryo-EM density map. Users need to use script provided in this repository to generate this labeled map.
 - ``amino_emd_normalized_map.mrc`` : Amino acids labeled cryo-EM density map. Users need to use script provided in this repository to generate this labeled map.
 - ``sec_struc_emd_normalized_map.mrc`` : Secondary structure labeled cryo-EM density map. Users need to use script provided in this repository to generate this labeled map.
 - ``6giq.pdb`` : PDB file of the cryo-EM density.
