@@ -157,13 +157,13 @@ Make sure that the cryo-EM density map in ``.map`` format, the corresponding PDB
 ```
 python3 get_resample_map.py <absolute input path> <chimera_path>
 ```
-The ``absolute input path`` is the directory where cryo-EM density maps are present (example: path to EMD_0) . If the UCSF chimera's path is different than ``/usr/bin/chimerax``, then please enter the correct path.
+The ``absolute input path`` is the directory where cryo-EM density maps are present (example: path to EMD_0). If the UCSF chimera's path is different than ``/usr/bin/chimerax``, then please enter the correct path.
 
 3. Run normalize map program:
 ```
 python3 get_normalize_map.py <absolute input path>
 ```
-The ``absolute input path`` is the directory where cryo-EM density maps are present. Normalization step uses resampled map.
+The ``absolute input path`` is the directory where cryo-EM density maps are present (example: path to EMD_0). Normalization step uses resampled map.
 
 4. Run labeling programs:
 
