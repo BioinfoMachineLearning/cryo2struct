@@ -3,7 +3,8 @@
 @author: nabin
 
 This script extracts carbon-alpha only atoms from protein structure (.pdb) and saves it.
-python3 get_ca_labels.py <input protein structure path> <output protein only ca structure path>
+Run:
+python3 get_ca_from_pdb.py <input protein structure path> <output protein only ca structure path>
 
 """
 
@@ -38,7 +39,6 @@ def save(x, y, z, count, amino_name, chain_id, true_ca_path):
 
 def label_mask(pdb_path, true_ca_path):
     count = 0
-
     parser = PDB.PDBParser(QUIET=True)
     pdb_map = pdb_path
     struct = parser.get_structure("CA", pdb_map)
@@ -55,7 +55,6 @@ def label_mask(pdb_path, true_ca_path):
 
 
 if __name__ == "__main__":
-
     input_pdb = sys.argv[1]
     true_ca_pdb = sys.argv[2]
     if os.path.exists(true_ca_pdb):
