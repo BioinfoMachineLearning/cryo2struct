@@ -2,7 +2,7 @@
 
 <div align="center">
 	
-[![Paper](http://img.shields.io/badge/paper-bioRxiv-3F87CC.svg)](https://www.biorxiv.org/content/10.1101/2023.06.14.545024v1.full.pdf)  [![CC BY 4.0][cc-by-shield]][cc-by]
+[![Paper](https://img.shields.io/badge/paper-scientific_data-blue)](https://doi.org/10.1038/s41597-024-03299-9)  [![CC BY 4.0][cc-by-shield]][cc-by]
 
 [cc-by]: http://creativecommons.org/licenses/by/4.0/
 [cc-by-image]: https://i.creativecommons.org/l/by/4.0/88x31.png
@@ -284,16 +284,16 @@ If you have any question, feel free to open an issue or reach out to us: [ngzvh@
 If you use the code or data in this package, please cite:
 
 ```bibtex
-@article {Cryo2StructData,
-	author = {Nabin Giri and Liguo Wang and Jianlin Cheng},
-	title = {Cryo2StructData: A Large Labeled Cryo-EM Density Map Dataset for AI-based Modeling of Protein Structures},
-	elocation-id = {2023.06.14.545024},
-	year = {2024},
-	doi = {10.1101/2023.06.14.545024},
-	publisher = {Cold Spring Harbor Laboratory},
-	URL = {https://www.biorxiv.org/content/early/2024/01/02/2023.06.14.545024},
-	eprint = {https://www.biorxiv.org/content/early/2024/01/02/2023.06.14.545024.full.pdf},
-	journal = {bioRxiv}
+@article{giri2024cryo2structdata,
+  title={Cryo2structdata: A large labeled cryo-em density map dataset for ai-based modeling of protein structures},
+  author={Giri, Nabin and Wang, Liguo and Cheng, Jianlin},
+  journal={Scientific Data},
+  DOI={https://doi.org/10.1038/s41597-024-03299-9},
+  volume={11},
+  number={1},
+  pages={1--14},
+  year={2024},
+  publisher={Nature Publishing Group}
 }
 
 ```
