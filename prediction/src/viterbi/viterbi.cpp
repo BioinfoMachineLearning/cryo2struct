@@ -17,7 +17,7 @@ std::vector<int> exclude_states_in_c; //global exclude states
 // Function prototype for viterbi_main with C linkage specification
 extern "C" void run_viterbi(std::vector<int> observation, int num_observations, std::vector<int> states, int num_states, std::vector<std::vector<double>> transition_matrix, std::vector<std::vector<double>> emission_matrix, std::vector<double> initial_matrix, std::vector<int> states_to_work_python);
 
-// Implementation of my_cpp_function with C linkage specification
+// Implementation of viterbi with C linkage specification
 extern "C" void viterbi(std::vector<int> observation, int num_observations, std::vector<int> states, int num_states, std::vector<std::vector<double>> transition_matrix, std::vector<std::vector<double>> emission_matrix, std::vector<double> initial_matrix, std::vector<int> states_to_work_python) 
 {
     // Run viterbi program
